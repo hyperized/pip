@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  become: yes
+  roles:
+    - role: hyperized.pip
+      pip_name: docker
+
+  tasks:
+    - command: pip3 --version
+      register: dockert
+      changed_when: False
+
+    - assert:
+        that:
+          - '"pip " in dockert.stdout'

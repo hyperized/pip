@@ -1,0 +1,24 @@
+---
+galaxy_info:
+  author: Gerben Geijteman
+  description: Ubuntu Ansible role to manage pip dependencies
+  company: Hyperized.net
+  license: MIT
+  min_ansible_version: 2.5
+  platforms:
+    - name: Ubuntu
+      versions:
+        - bionic
+  galaxy_tags:
+    - pip
+    - pip3
+dependencies:
+  - role: hyperized.apt-repo
+    apt_repo_repo: "deb http://archive.ubuntu.com/ubuntu/ bionic universe"
+  - role: hyperized.apt-repo
+    apt_repo_repo: "deb http://archive.ubuntu.com/ubuntu/ bionic-updates universe"
+  - role: hyperized.apt-repo
+    apt_repo_repo: "deb http://security.ubuntu.com/ubuntu/ bionic-security universe"
+  - role: hyperized.package
+    package_name: python3-pip
+    package_state: "{{ pip_state }}"

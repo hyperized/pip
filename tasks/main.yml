@@ -1,0 +1,7 @@
+---
+- name: install required pip
+  pip:
+    name: "{{ pip_name }}"
+    state: "{{ pip_state }}"
+    executable: "{{ pip_executable }}"
+    extra_args: "{{ pip_extra_args | default(omit) }}"
