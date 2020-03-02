@@ -13,11 +13,11 @@ galaxy_info:
     - pip
     - pip3
 dependencies:
-  - role: hyperized.apt-repo
+  - role: hyperized.apt_repo
     apt_repo_repo: "deb http://archive.ubuntu.com/ubuntu/ bionic universe"
-  - role: hyperized.apt-repo
+  - role: hyperized.apt_repo
     apt_repo_repo: "deb http://archive.ubuntu.com/ubuntu/ bionic-updates universe"
-  - role: hyperized.apt-repo
+  - role: hyperized.apt_repo
     apt_repo_repo: "deb http://security.ubuntu.com/ubuntu/ bionic-security universe"
   - role: hyperized.package
     package_name: python3-pip

@@ -21,7 +21,7 @@ Dependencies
 ------------
 
     hyperized.package
-    hyperized.apt-repo
+    hyperized.apt_repo
 
 Example Playbook
 ----------------
